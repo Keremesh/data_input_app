@@ -1,5 +1,9 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require_relative './lib/database_connection'
+require_relative './lib/admin_repo'
+# require_relative './lib/user_repository'
+require 'bcrypt'
 
 class Application < Sinatra::Base
   # This allows the app code to refresh
@@ -11,6 +15,9 @@ class Application < Sinatra::Base
   #  - a GET method
   #  - the path /
   get '/' do
+        # repo = AdminRepository.new
+        # @admins = repo.all
+        return erb(:index)
     # The code here is executed when a request is received and we need to 
     # send a response. 
 
