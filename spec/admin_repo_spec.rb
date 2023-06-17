@@ -42,7 +42,6 @@ RSpec.describe AdminRepository do
     admin = Admin.new
     admin.username = "NewAdmin"
     admin.password = BCrypt::Password.create("newadmin")
-
     repo.create(admin)
     admins = repo.all
 
@@ -77,12 +76,6 @@ RSpec.describe AdminRepository do
     xit "returns false if the admin supplies incorrect username/password combo" do
       repo = AdminRepository.new
       sign_in_result = repo.sign_in('bmckue3@hostgator.com', 'jamespates')
-
-
     end
   end
-
-
-
-
 end

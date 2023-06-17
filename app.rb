@@ -23,6 +23,6 @@ class Application < Sinatra::Base
 
     # We can return a string which will be used as the response content.
     # Unless specified, the response status code will be 200 (OK).
-    return 'Some response data'
+    # return 'Some response data'
   end
 end

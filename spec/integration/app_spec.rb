@@ -22,7 +22,7 @@ describe Application do
 
       # Assert the response status code and body.
       expect(response.status).to eq(200)
-      expect(response.body).to include('<h1>Homepage</h1>')
+      expect(response.body).to include('<h1>Login</h1>')
     end
   end
 
@@ -33,12 +33,6 @@ describe Application do
       # and returns a response object we can test.
       response = post("/submit", name: "Dana", some_other_param: 12)
 
-      # Assert the response status code and body.
-      expect(response.status).to eq(200)
-      expect(response.body).to eq("Hello Dana")
-    end
-  end
-end
       # Assert the response status code and body.
       expect(response.status).to eq(200)
       expect(response.body).to eq("Hello Dana")
